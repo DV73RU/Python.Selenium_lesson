@@ -14,8 +14,8 @@ result = s.format(name)  # Переменная принимаени згаче�
 print(result)   # Выводим на печать значение переменной
 
 
-first_name = "Иван"
-last_name = "Иванов"
+first_name = input
+last_name = input
 a = '{} {}'     # 1
 result_2 = a.format(first_name, last_name)  # 2
 print("Привет :" + result_2)    # Константинация
