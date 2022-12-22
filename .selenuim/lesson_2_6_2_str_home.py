@@ -22,4 +22,4 @@ result_2 = a.format(first_name, last_name)  # 2
 print("Привет :" + result_2.title)    # Константинация
 
 result_3 = f'{first_name} {last_name}'   # Аналогичнго как 1 и 2
-print("Прив :" + result_3.title())  # Выводит результат первая буква в верхнем регистре + константинация
+print("Прив :" + result_3.title())  # Выводит результат первая буква в верхнем регистре + константинаци
