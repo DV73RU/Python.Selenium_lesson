@@ -5,12 +5,16 @@ pin_bamk = 9876
 ostatok = 24890
 print("Введите PIN код : ")
 user_pin = int(input())
-valid = "YN"
+valid = "Y"
 
 
 if user_pin == 9876:
     print("Проверить баланс карты: Y/N")
     print("Какую сумму хоти снять?: ")
+    valid == str(input())
+    if valid == "Y":
+        print("Баовнс на карте :" + str(ostatok))
+
 
 
 else:
