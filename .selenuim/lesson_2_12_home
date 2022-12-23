@@ -1,33 +1,46 @@
 # lesson_2_12_home
 """Банкомат. Проверяем валидность PIN кода."""
 
-pin_bamk = 9876
-ostatok = 24890
 print("Введите PIN код : ")
-user_pin = int(input())
-valid = "Y"
+pin_bamk = 9876
+ostatok_ob = 24890
+
+valids = "Y"
+invalid = "N"
 
 
-if user_pin == 9876:
-    print("Проверить баланс карты: Y/N")
-    print("Какую сумму хоти снять?: ")
-    valid == str(input())
-    if valid == "Y":
-        print("Баовнс на карте :" + str(ostatok))
-
-
-
-else:
-    print("Ошибка, ввведите короектный PIN код, у вас осталось 2 попытки")
+def valid():
     user_pin = int(input())
-    if pin_bamk == user_pin:
-        print("Проверить баланс карты")
+    if user_pin == pin_bamk:
+        print("Проверить баланс карты: Y/N")
         print("Какую сумму хоти снять?: ")
-    else:
-        print("Ошибка, ввведите короектный PIN код, у вас осталось 1 попытка")
-        user_pin = int(input())
-        if pin_bamk == user_pin:
-            print("Проверить баланс карты: Y/N")
+        valids = str(input())
+        if valids == "Y":
+            print("Баланс на карте :", ostatok_ob)
             print("Какую сумму хоти снять?: ")
+            sn = int(input())
+            ostatok = ostatok_ob - sn
+            print("Вы сняли: ", sn)
+            print("На карте отстаток: ", ostatok)
+            return ostatok_ob
         else:
-            print("Ошибка, Ваша карта заблокирована обратитесь в банк")
+            valids != "Y"
+            print("Выход")
+    else:
+        print("Ошибка, ввведите корректный PIN код, у вас осталось 3 попытки")
+        user_pin = int(input())
+
+
+valid()
+
+
+
+        
+        # else:
+        #     print("Ошибка, ввведите короектный PIN код, у вас осталось 1 попытка")
+        #     user_pin = int(input())
+        #     if pin_bamk == user_pin:
+        #         print("Проверить баланс карты: Y/N")
+        #         print("Какую сумму хоти снять?: ")
+        #     else:
+        #         print("Ошибка, Ваша карта заблокирована обратитесь в банк")
