@@ -1,0 +1,27 @@
+# lesson_2_12_home
+"""Банкомат. Проверяем валидность PIN кода."""
+
+pin_bamk = 9876
+ostatok = 24890
+print("Введите PIN код : ")
+user_pin = int(input())
+valid = "YN"
+
+
+if user_pin == 9876:
+    print("Проверить баланс карты: Y/N")
+    print("Какую сумму хоти снять?: ")
+
+
+else:
+    print("Ошибка, ввведите короектный PIN код, у вас осталось 2 попытки")
+    user_pin = int(input())
+    if pin_bamk == user_pin:
+        print("Проверить баланс карты")
+        print("Какую сумму хоти снять?: ")
+    else:
+        print("Ошибка, ввведите короектный PIN код, у вас осталось 1 попытка")
+        user_pin = int(input())
+        if pin_bamk == user_pin:
+            print("Проверить баланс карты: Y/N")
+            print("Какую сумму хоти снять?: ")
