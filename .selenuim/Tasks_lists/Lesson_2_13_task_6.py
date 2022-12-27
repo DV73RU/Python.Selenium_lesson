@@ -10,15 +10,17 @@
 frends = []   # Создаём новый список
 spisok = (len(frends))     # Переменная принимает значения корличества элементов в списке
 print(f"У вас {spisok} друзей")     # Выводим количество элементов + Фраза
-new_frend = input("Введите имя друга : ")
-frends.append(new_frend)  # Переменная принимает вводимое значение
+new_frend = input("Введите имя друга : ")   # Переменная принимает вводимое значение
+frends.append(new_frend)    # Добовляем введенный элемент к списку
 new_frend = input("Введите имя друга : ")
 frends.append(new_frend)
 new_frend = input("Введите имя друга : ")
-frends.append(new_frend)    # Добавляем в список новый элемент введённый с клавиатуры
+frends.append(new_frend)    
 spisok = (len(frends))  # Перееменная принимает  новое количество элементо списка
 print(f"У вас {spisok} друг: ")    # Выводим фрузу с вставкой количества элементов с новым
 print(frends)
 
 del frends[1]   # Удаляем второй элемент
 print(frends)   # Выводим новый список
+spisok = (len(frends))
+print(f"У вас теперь {spisok} друга: ")
