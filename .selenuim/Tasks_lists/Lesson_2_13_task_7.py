@@ -10,6 +10,6 @@
 moto = ["honda", "yamaha", "suzuki"]
 print(moto)
 tool_moto = "honda"
-moto.remove(tool_moto)    # Удаление элемента со хначением "honda"
+moto.remove(tool_moto)    # Удаление элемента со значением "honda" и продлжает в ней храниться
 print(moto)
 print(f"\nМотоцикл {tool_moto.title()} сломался")
