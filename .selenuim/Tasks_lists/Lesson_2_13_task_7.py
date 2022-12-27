@@ -9,5 +9,5 @@
 
 moto = ["honda", "yamaha", "suzuki"]
 print(moto)
-moto.remove('honda')    #Удаление элемента со хначением "honda"
+moto.remove('honda')    # Удаление элемента со хначением "honda"
 print(moto)
