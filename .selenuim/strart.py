@@ -1,4 +1,4 @@
 """Start."""
 
-import hello
+import . hello
 hello.some
