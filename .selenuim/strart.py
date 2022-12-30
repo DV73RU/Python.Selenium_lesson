@@ -1,4 +1,4 @@
 """Start."""
 
 import hello
-hello.some
+hello.some()
