@@ -1,0 +1,1 @@
+fw = open('doc/file.txt')
