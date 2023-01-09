@@ -3,9 +3,10 @@
 import hello
 import math
 import random
-from mode import math   #Из папки mode импортируем (пероритетные модули чем стандартные библиотеки)
+# Из папки mode импортируем (пероритетные модули чем стандартные библиотеки)
+from mode import math
 hello.some()
-print(math.pi)  #Печатаем переменную из изпортированного модуля
+print(math.pi)  # Печатаем переменную из изпортированного модуля
 r = random.randrange(0, 100)
 print(r)
 user = "User"

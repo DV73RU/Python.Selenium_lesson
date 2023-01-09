@@ -1,12 +1,11 @@
 """Несколько функций"""
 
 
-
-def sume(a, b):
+def sub(a, b):
     result = a + b
     print("Сумма равна: " + str(result))
 
-def sume(a, b):
+
+def raz(a, b):
     result = a - b
     print("Разница равна: " + str(result))
-
