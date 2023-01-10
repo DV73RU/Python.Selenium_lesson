@@ -1,4 +1,6 @@
 """Калькулятор"""
+
+
 # from termcolor import colored, cprint
 
 a = int(input("Введите первое число: "))
