@@ -1,9 +1,14 @@
 """Классы."""
 # Ппоробовать через словари Имен фамилий изерей.
+first_name = ["Анатолий", "Сергей", "Марина"]
+last_name = ["Иванов", "Петров", "Павлова"]
+age = [45, 23, 43]
+gender = ["Мужчина", "Женщина"]
 
 
 class User():
     """Класс пользователь."""
+
 
     # Метод __init__ с четырмя параметрами first_name, last_name....
     def __init__(self, first_name, last_name, age, gender):
@@ -17,12 +22,12 @@ class User():
         """Метод выводит информацию о пользоваетеле."""
         print(f"{self.first_name} {self.last_name} {self.age} {self.gender}")
 
-    def gret_user(self): 
+    def gret_user(self):
         """Метод выводит приветствие пользователя."""
         print("Добро пожаловать")
 
 
-user = User("Анатолий", "Иванов", 45, "Мужчина")
+user = User(first_name[0], last_name[0], str(age[0]), gender[0])
 user_1 = User("Сергей", "Петров", 23, "Мужчина")
 user_2 = User("Марина", "Павлова", 43, "Женщина")
 user.gret_user()
