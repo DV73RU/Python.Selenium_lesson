@@ -47,7 +47,8 @@ class Battery():
         elif self.battary_size == 100:
             range = 316
         print(f'Эта машина проедет {range} км. на полной зарядки.')
-
+    
+    def update_range(self):
 
 class ElectricCar(Car):
     """Представляет аспекты машины, спецефические для электромобиля."""
@@ -56,8 +57,8 @@ class ElectricCar(Car):
         """инициализирует атрибуты класса-родителя.
         Затем инициализирует атрибуты, специальные для электромобиля
         """
-        super().__init__(make, model, year)
-        self.describe = Battery()
+        super().__init__(make, model, year, get_batte)
+        self.get_batta = 1200
 
     # def describe_batt(self):
     #      print(f"Ескость акумулятора: {self.battary_size} mAch")
