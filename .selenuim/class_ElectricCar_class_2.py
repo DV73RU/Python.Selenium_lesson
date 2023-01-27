@@ -31,7 +31,7 @@ class Car():
 
 
 class Battery():
-    """Мордель аккумулятора"""
+    """Модель аккумулятора"""
 
     def __init__(self, battary_size=100):
         self.battary_size = battary_size
