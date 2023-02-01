@@ -13,7 +13,7 @@ base_url = 'https://academyopen.ru/'
 driver_g.get(base_url)
 driver_g.maximize_window()
 
-number = 1234567890
+number = 1234567899 # Не валидный номер телефона
 kode = 9876
 
 registration = driver_g.find_element(By.XPATH, '//*[@id="__next"]/div[1]/header/div[1]/div[2]/div/button/span')
@@ -29,6 +29,11 @@ print('Страница авторизации найдена')
 tel_number = driver_g.find_element(By.XPATH, '//*[@id="__next"]/div/main/div/div[1]/div/div[2]/div[1]/form/div/div[3]/div/input')
 tel_number.send_keys(number)
 print("Веден номер телефона")
+
+warning_text = driver_g.find_element(By.XPATH, "//*[@id='__next']/div/main/div/div[1]/div/div[2]/div[1]/form/div/div[3]/div/div")
+value_warnind_text = warning_text.text
+assert value_warnind_text == "Неверный номер телефона"
+print("GOOD TEST")
 
 # Функция нажатия на чек бокс
 # Функция нажатия на кнопку "Получить код"

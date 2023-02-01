@@ -29,6 +29,10 @@ print('Страница авторизации найдена')
 tel_number = driver_g.find_element(By.XPATH, '//*[@id="__next"]/div/main/div/div[1]/div/div[2]/div[1]/form/div/div[3]/div/input')
 tel_number.send_keys(number)
 print("Веден номер телефона")
+# Находим чекбокс
+checkbox = driver_g.find_element(By.XPATH, "//*[@id='__next']/div/main/div/div[1]/div/div[2]/div[1]/form/div/div[5]/label/input")
+# Кликаем на чек бокс
+checkbox.click()
 
 # Функция нажатия на чек бокс
 # Функция нажатия на кнопку "Получить код"
