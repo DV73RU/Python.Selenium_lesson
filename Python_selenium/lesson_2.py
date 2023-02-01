@@ -29,14 +29,11 @@ print('Ввод парол')
 button_login = driver_g.find_element(By.ID, 'login-button')
 button_login.click()
 print('Клик')
-text_produkts = driver_g.find_element(By.XPATH, "//*[@id='login_button_container']/div/form/div[3]/h3")
-value_test_preoduction = text_produkts.text
-assert value_test_preoduction == "PRODUCTS"
-print("Тест авторизации пройден")
 
-warning_text = driver_g.find_element(By.XPATH, '//*[@class="title"]')
-value_warnind_text = warning_text
-assert warning_text == "Epic sadface: Username and password do not match any user in this service"
+
+warning_text = driver_g.find_element(By.XPATH, "//H3[@data-test='error']")
+value_warnind_text = warning_text.text
+assert value_warnind_text == "Epic sadface: Username and password do not match any user in this service"
 
 print("GOOD TEST")
 # if value_test_preoduction == "PRODUCTS":
