@@ -13,8 +13,13 @@ base_url = 'https://www.saucedemo.com/'
 driver_g.get(base_url)
 driver_g.maximize_window()
 
-login = "standard_user"
+login = "standard_user1"
 password_all = "secret_sauce"
+url = "https://www.saucedemo.com/"
+get_url = driver_g.current_url
+print(get_url)
+assert url == get_url
+print("Url: " + url + " главной корректный")
 user_name = driver_g.find_element(By.ID, 'user-name')
 user_name.send_keys(login)
 print('Ввод логин')
@@ -24,17 +29,23 @@ print('Ввод парол')
 button_login = driver_g.find_element(By.ID, 'login-button')
 button_login.click()
 print('Клик')
-text_produkts = driver_g.find_element(By.XPATH, '//*[@class="title"]')
+text_produkts = driver_g.find_element(By.XPATH, "//*[@id='login_button_container']/div/form/div[3]/h3")
 value_test_preoduction = text_produkts.text
 assert value_test_preoduction == "PRODUCTS"
-print("Тест не авторизации пройден")
+print("Тест авторизации пройден")
 
-url = "https://www.saucedemo.com/inventory.html"
-get_url = driver_g.current_url
-print(get_url)
-assert url == get_url
-print("Url: " + url + " главной корректный")
+warning_text = driver_g.find_element(By.XPATH, '//*[@class="title"]')
+value_warnind_text = warning_text
+assert warning_text == "Epic sadface: Username and password do not match any user in this service"
 
+print("GOOD TEST")
+# if value_test_preoduction == "PRODUCTS":
+#     print("Тест авторизации пройден")
+# else:
+#     print("Тест не авторизации не пройден")
 
 # time.sleep(10)
 # driver_g.close()
+
+
+

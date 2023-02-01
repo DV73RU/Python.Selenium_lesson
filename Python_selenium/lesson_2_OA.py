@@ -41,4 +41,5 @@ print("Веден номер телефона")
 # driver_g.close()
 
 
-#  //*[@id="__next"]/div[1]/header/div[1]/div[2]/div/button/span
+
+# //*[@id="__next"]/div/main/div/div[1]/div/div[2]/div[1]/form/div/div[3]/div/div # Не верный номер телефона
