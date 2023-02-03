@@ -13,6 +13,19 @@ options = webdriver.ChromeOptions()
 
 options.add_experimental_option("detach", True)
 options.add_argument('--ignore-certificate-errors')
+options.add_argument('--disable-gpu')
+options.add_argument('--mute-audio')
+options.add_argument('--ignore-certificate-errors')
+options.add_argument('--ignore-ssl-errors')
+options.add_argument('--disable-infobars')
+options.add_argument('--ignore-certificate-errors-spki-list')
+options.add_argument('--no-sandbox')
+options.add_argument('--no-zygote')
+options.add_argument('--log-level=3')
+options.add_argument('--allow-running-insecure-content')
+options.add_argument('--disable-web-security')
+options.add_argument('--disable-features=VizDisplayCompositor')
+options.add_argument('--disable-breakpad')
 g = Service('H:\\Python.Selenium_lesson-1\\Python_selenium\\chromedriver.exe')
 driver_g = webdriver.Chrome(options=options, service=g)
 base_url = 'https://academyopen.ru/'
@@ -61,7 +74,7 @@ print(Fore.BLUE + 'Страница подтверждения смс кода -
 
 # Вводим в поле код смс
 time.sleep(2)
-# Ищем поле ввода  кода смс.
+# Ищем поле ввода кода смс.
 code_sms = driver_g.find_element(
     By.XPATH, "//*[@id='__next']/div/main/div/div[1]/div/div[2]/div[1]/div[1]/div[2]/form/div/div/input[1]")
 code_sms.send_keys(code)
