@@ -1,5 +1,5 @@
-# import time
-
+import time
+import datetime
 from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.common.by import By
@@ -34,7 +34,10 @@ get_url = driver_g.current_url
 print(get_url)
 assert url == get_url
 print("Url: " + url + " главной корректный")
-
+time.sleep(2)
+new_data = datetime.datetime.utcnow().strftime("%Y.%m.%d.%H.%M")    # Время создания скриншёта.
+name_skrin = 'skr_' + new_data + '.png'     # Генерируем имя файла скриншёта.
+driver_g.save_screenshot('H:\\Python.Selenium_lesson-1\\Python_selenium\\screen\\' + name_skrin)    # Создаём сриншёт в папке screen
 
 # time.sleep(10)
 # driver_g.close()
