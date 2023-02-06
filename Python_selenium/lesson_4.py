@@ -1,9 +1,9 @@
-import time
 import datetime
+import time
+
 from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.common.by import By
-
 
 options = webdriver.ChromeOptions()
 options.add_experimental_option("detach", True)
@@ -39,8 +39,8 @@ print('Клик')
 # print("Url: " + url + " главной корректный")
 time.sleep(2)
 
-driver_g.execute_script("window.scrollTo(0, 200)")  # Скрол на 200 пикселей по Y.
-
+# driver_g.execute_script("window.scrollTo(0, 200)")  # Скрол на 200 пикселей по Y.
+action = ActionChains(driver_g)
 # new_data = datetime.datetime.utcnow().strftime("%Y.%m.%d.%H.%M")    # Время создания скриншёта.
 # name_skrin = 'skr_' + new_data + '.png'     # Генерируем имя файла скриншёта.
 # driver_g.save_screenshot('H:\\Python.Selenium_lesson-1\\Python_selenium\\screen\\' + name_skrin)    # Создаём сриншёт в папке screen
