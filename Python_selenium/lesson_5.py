@@ -24,14 +24,15 @@ user_name.send_keys(login)
 print('Ввод логин')
 time.sleep(2)
 
+
 password = driver_g.find_element(By.ID, 'password')
 password.send_keys(password_all)
 print('Ввод пароля')
 time.sleep(2)
-
-button_login = driver_g.find_element(By.ID, 'login-button')
-button_login.click()
-print('Клик')
+password.clear()
+# button_login = driver_g.find_element(By.ID, 'login-button')
+# button_login.click()
+# print('Клик')
 
 time.sleep(2)
 
