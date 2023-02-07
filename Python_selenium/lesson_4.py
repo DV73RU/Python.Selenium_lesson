@@ -42,9 +42,12 @@ time.sleep(2)
 
 # driver_g.execute_script("window.scrollTo(0, 200)")  # Скрол на 200 пикселей по Y.
 action = ActionChains(driver_g)
-# new_data = datetime.datetime.utcnow().strftime("%Y.%m.%d.%H.%M")    # Время создания скриншёта.
-# name_skrin = 'skr_' + new_data + '.png'     # Генерируем имя файла скриншёта.
-# driver_g.save_screenshot('H:\\Python.Selenium_lesson-1\\Python_selenium\\screen\\' + name_skrin)    # Создаём сриншёт в папке screen
+red_t_shit = driver_g.find_element(By.XPATH, "//li[@class='social_twitter']")   
+action.move_to_element(red_t_shit).perform()    # Скрол на нужный локатор.
+time.sleep(5)
+new_data = datetime.datetime.utcnow().strftime("%Y.%m.%d.%H.%M")    # Время создания скриншёта.
+name_skrin = 'skr_' + new_data + '.png'     # Генерируем имя файла скриншёта.
+driver_g.save_screenshot('H:\\Python.Selenium_lesson-1\\Python_selenium\\screen\\' + name_skrin)    # Создаём сриншёт в папке screen
 
 # time.sleep(10)
 # driver_g.close()
