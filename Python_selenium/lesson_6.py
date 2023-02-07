@@ -29,10 +29,14 @@ password = driver_g.find_element(By.ID, 'password')
 password.send_keys(password_all)
 print('Ввод пароля')
 time.sleep(2)
-password.clear()
-# button_login = driver_g.find_element(By.ID, 'login-button')
-# button_login.click()
-# print('Клик')
+
+button_login = driver_g.find_element(By.ID, 'login-button')
+button_login.click()
+print('Клик кнопки авторизации')
 
 time.sleep(2)
 
+menu = driver_g.find_element(By.XPATH, "//button[@id ='react-burger-menu-btn']")
+menu.click()
+print('Клик на кнопку меню.')
+time.sleep(2)
