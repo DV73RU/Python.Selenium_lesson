@@ -13,7 +13,7 @@ base_url = 'https://academyopen.ru/'
 driver_g.get(base_url)
 driver_g.maximize_window()
 
-number = 1234567899 # Не валидный номер телефона
+number = 1234567899     # Не валидный номер телефона
 kode = 9876
 
 registration = driver_g.find_element(By.XPATH, '//*[@id="__next"]/div[1]/header/div[1]/div[2]/div/button/span')
