@@ -68,3 +68,30 @@ container = driver_g.find_element(By.XPATH, "//span[@class ='shopping_cart_badge
 value_container = container.text
 print(f"Количество добавленного товара в корзину: {value_container}")
 
+shopping_cart = driver_g.find_element(By.XPATH, "//a[@class='shopping_cart_link']")    # Присваиваем переменной локатор кнопки "значка корзины".
+shopping_cart.click()
+print("Нажата кнопка 'Корзина'")
+
+url_card = "https://www.saucedemo.com/cart.html"
+get_url_card = driver_g.current_url
+print(get_url_card)
+assert url_card == get_url_card
+print(f"Current URL: {get_url_card} matches {url_card}")
+
+"""Информация о продукте в карзине."""
+card_price_produkt_1 = driver_g.find_element(By.XPATH, "//div[@class = 'inventory_item_price']")    # Присваиваем переменной локатор цену продукта №1.
+price_value_card_produkt_1 = card_price_produkt_1.text
+print(f"Цена продукта в корзине: {price_value_card_produkt_1}")
+
+"""Информация о продукте в корзине ."""
+card_produkt_1 = driver_g.find_element(By.XPATH, "//a[@id = 'item_4_title_link']")    # Присваиваем переменной локатор название продукта №1.
+card_value_produkt_1 = card_produkt_1.text
+print(f"Название продукта в корзине: {card_value_produkt_1}")
+assert card_value_produkt_1 == value_produkt_1
+print("Название выбранного товара совпадает с названием в корзине")
+
+card_produkt_1 = driver_g.find_element(By.XPATH, "//a[@id = 'item_4_title_link']")    # Присваиваем переменной локатор название продукта №1.
+card_value_produkt_1 = card_produkt_1.text
+print(f"Цена продукта в корзине: {card_value_produkt_1}")
+assert card_value_produkt_1 == value_produkt_1
+print("Цена выбранного товара совпадает с ценой в корзине")
