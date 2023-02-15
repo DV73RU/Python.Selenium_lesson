@@ -8,6 +8,12 @@ from colorama import Style
 
 init(autoreset=True)
 
+# Создаем cookie
+private static final Cookie COOKIE = new Cookie("имя", "содержимое", "домен", "путь", new Date("дата"));
+# Создаем браузер
+WebDriver driver = new ChromeDriver(options);
+# Добавляем cookie в браузер
+driver.manage().addCookie(COOKIE);
 
 options = webdriver.ChromeOptions()
 

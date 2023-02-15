@@ -51,20 +51,20 @@ button_login.click()
 print('Клик кнопки авторизации')
 time.sleep(2)
 
-menu = driver_g.find_element(
-    By.XPATH, "//button[@id ='react-burger-menu-btn']")
-menu.click()
-print('Клик на кнопку меню.')
-time.sleep(2)
+"""Информация о продукте №1."""
+produkt_1 = driver_g.find_element(By.XPATH, "//a[@id = 'item_4_title_link']")    # Присваиваем переменной локатор название продукта №1.
+value_produkt_1 = produkt_1.text
+print(f"Название продукта: {value_produkt_1}")
 
-link_abaut = driver_g.find_element(By.XPATH, "//a[@id='about_sidebar_link']")
-link_abaut.click()
-print('Клик на кнопку About в меню.')
+price_produkt_1 = driver_g.find_element(By.XPATH, "//div[@class = 'inventory_item_price']")    # Присваиваем переменной локатор цену продукта №1.
+price_value_produkt_1 = price_produkt_1.text
+print(f"Цена продукта: {price_value_produkt_1}")
 
-time.sleep(2)
+add_to_cart = driver_g.find_element(By.XPATH, "//button[@id = 'add-to-cart-sauce-labs-backpack']")    # Присваиваем переменной локатор кнопки "add to card".
+add_to_cart.click()
+print("Нажата кнопка 'ADD TO CARD'")
 
-url_about = "https://saucelabs.com/"
-get_url_about = driver_g.current_url
-print(get_url_about)
-assert url_about == get_url_about
-print(f"Current URL: {get_url_about} matches {url_about}")
+container = driver_g.find_element(By.XPATH, "//span[@class ='shopping_cart_badge']")    # Присваиваем переменной локатор кнопки "значка количесво товаров в каорзине".
+value_container = container.text
+print(f"Количество добавленного товара в корзину: {value_container}")
+
