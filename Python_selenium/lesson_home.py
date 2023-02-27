@@ -4,6 +4,7 @@
 # Установка:
 # python -m pip install --upgrade pip.
 # python -m venv .selenium - Установка вертуального окружениея.
+# pip3 install selenium
 
 
 import datetime
