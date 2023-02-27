@@ -1,4 +1,10 @@
 """Взаимодействие со скрытыми элементами."""
+# https://selenium-python.com/
+
+# Установка:
+# python -m pip install --upgrade pip.
+# python -m venv .selenium - Установка вертуального окружениея.
+
 
 import datetime
 import time
